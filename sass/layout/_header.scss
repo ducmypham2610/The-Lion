@@ -1,0 +1,79 @@
+.header {
+  padding: 0 3rem;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-largest) {
+    padding: 0 1rem;
+    height: 60vh;
+  }
+
+  &__title {
+    flex: 1;
+    max-width: 120rem;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 1rem;
+    row-gap: 3rem;
+    justify-content: center;
+    align-content: center;
+
+    align-items: start;
+    justify-items: start;
+
+    @media only screen and (max-width: $bp-largest) {
+      grid-template-columns: 1fr 1fr;
+      max-width: 90rem;
+      column-gap: 0.5rem;
+      row-gap: 1.5rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 1 / span 4;
+    transform: translateY(-2rem) skewX(-10deg) scale(1.1);
+    -webkit-transform: translateY(-2rem) skewX(-10deg) scale(1.1);
+    -moz-transform: translateY(-2rem) skewX(-10deg) scale(1.1);
+    -ms-transform: translateY(-2rem) skewX(-10deg) scale(1.1);
+    -o-transform: translateY(-2rem) skewX(-10deg) scale(1.1);
+    box-shadow: 1rem 0.5rem 5rem $color-grey-dark-2;
+
+    @media only screen and (max-width: $bp-largest) {
+      width: 80%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 70%;
+    }
+  }
+}
+
+.highlight {
+  position: relative;
+}
+
+.highlight::after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.9;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  -webkit-transform: scale(1.07, 1.05) skewX(-15deg);
+  -moz-transform: scale(1.07, 1.05) skewX(-15deg);
+  -ms-transform: scale(1.07, 1.05) skewX(-15deg);
+  -o-transform: scale(1.07, 1.05) skewX(-15deg);
+  background: linear-gradient(
+    to bottom left,
+    $color-primary-light,
+    $color-primary
+  );
+}

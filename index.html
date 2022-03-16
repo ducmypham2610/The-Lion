@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/site.webmanifest" />
+    <title>The Lion - Kickboxing & Coaching Center</title>
+    <link rel="stylesheet" href="./sass/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="home">
+      <nav class="nav">
+        <img src="./img/logo.jpg" alt="The Lion logo" class="nav__logo" />
+        <ul class="nav__links">
+          <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About us</a>
+          </li>
+          <li class="nav__item">
+            <a href="#feature" class="nav__link">Features</a>
+          </li>
+          <li class="nav__item">
+            <a href="#packages" class="nav__link">Packages</a>
+          </li>
+          <li class="nav__item">
+            <a href="#form" class="nav__link nav__link--btn btn--show-modal"
+              >Free trial</a
+            >
+          </li>
+          <li class="nav__item nav__item--responsive">
+            <a href="" class="nav__link nav__responsive">&nbsp;</a>
+            <ul class="nav__responsive--link hidden">
+              <li class="nav__responsive--item">
+                <a href="#home" class="nav__link">Home</a>
+              </li>
+              <li class="nav__responsive--item">
+                <a href="#about" class="nav__link">About us</a>
+              </li>
+              <li class="nav__responsive--item">
+                <a href="#feature" class="nav__link">Features</a>
+              </li>
+              <li class="nav__responsive--item">
+                <a href="#package" class="nav__link">Packages</a>
+              </li>
+              <li class="nav__responsive--item">
+                <a href="#" class="nav__link nav__link--btn btn--show-modal"
+                  >Free trial</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__title">
+        <h1>
+          It never gets
+          <span class="highlight">easier</span>
+          <br />
+          You just get <span class="highlight">stronger</span>
+        </h1>
+        <h4>Your journey to a healthier life.</h4>
+        <button class="btn--text">Explore more &DownArrow;</button>
+        <img src="./img/hero.png" alt="The Lion image" class="header__img" />
+      </div>
+    </header>
+
+    <!-- About -->
+    <section class="section__about" id="about">
+      <div class="section__about--title">
+        <h1 class="primary__heading">We are The Lion</h1>
+      </div>
+
+      <div class="about">
+        <img src="./img/img-1.jpg" alt="" class="about__img" />
+        <div class="about__feature">
+          <h5 class="about__header">Always enthusiastic</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias
+            sint quos? Accusantium a fugiat porro reiciendis saepe quibusdam
+            debitis ducimus.
+          </p>
+        </div>
+
+        <div class="about__feature">
+          <h5 class="about__header">Build a healthy body for you</h5>
+          <p>
+            Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
+            inventore ab? Nulla incidunt eius numquam sequi iste pariatur
+            quibusdam!
+          </p>
+        </div>
+        <img src="./img/img-2.jpg" alt="" class="about__img lazy-img" />
+
+        <img src="./img/img-3.jpg" alt="" class="about__img lazy-img" />
+        <div class="about__feature">
+          <h5 class="about__header">Make you more confident</h5>
+          <p>
+            Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
+            inventore ab? Nulla incidunt eius numquam sequi iste pariatur
+            quibusdam!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section__features" id="feature">
+      <h1 class="primary__heading">Why you should choose us</h1>
+      <div class="feature">
+        <svg class="feature__icon">
+          <use xlink:href="img/sprite.svg#icon-users"></use>
+        </svg>
+        <h3 class="feature__title">Professional coaches</h3>
+        <p class="feature__text">
+          At the Lion, we are a team of coaches with many years of experience
+          and highly specialized knowledge.
+        </p>
+      </div>
+
+      <div class="feature">
+        <svg class="feature__icon">
+          <use xlink:href="img/sprite.svg#icon-list-numbered"></use>
+        </svg>
+        <h3 class="feature__title">Excellent training plan</h3>
+        <p class="feature__text">
+          We always carefully prepare training plans before each training
+          session to help you achieve your goals early.
+        </p>
+      </div>
+
+      <div class="feature">
+        <svg class="feature__icon">
+          <use xlink:href="img/sprite.svg#icon-stats-dots"></use>
+        </svg>
+        <h3 class="feature__title">Follow up with trainees</h3>
+        <p class="feature__text">
+          We always observe and record your training progress, so we can draw up
+          a suitable plan.
+        </p>
+      </div>
+
+      <div class="feature">
+        <svg class="feature__icon">
+          <use xlink:href="img/sprite.svg#icon-clock"></use>
+        </svg>
+        <h3 class="feature__title">Flexible time</h3>
+        <p class="feature__text">
+          At the Lion, you can choose a very flexible time frame, by working
+          with your coach to find a time that works for your daily schedule.
+        </p>
+      </div>
+
+      <div class="feature">
+        <svg class="feature__icon">
+          <use xlink:href="img/sprite.svg#icon-bubbles2"></use>
+        </svg>
+        <h3 class="feature__title">More communications</h3>
+        <p class="feature__text">
+          We always try to communicate as much as possible to impart knowledge
+          as well as create an exciting atmosphere in the training session.
+        </p>
+      </div>
+
+      <div class="feature">
+        <svg class="feature__icon">
+          <use xlink:href="img/sprite.svg#icon-fire"></use>
+        </svg>
+        <h3 class="feature__title">Full of energy</h3>
+        <p class="feature__text">
+          We are a young team always full of enthusiasm and energy, this will
+          motivate us to be able to give our customers the best services.
+        </p>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section__price" id="packages">
+      <div class="section__price--title">
+        <h1 class="primary__heading">Popular training packages</h1>
+      </div>
+      <div class="section__price--packages">
+        <div class="section__price--package">
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__picture card__picture--1">&nbsp;</div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--1">
+                  Package 1
+                </span>
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>12 sessions</li>
+                  <li>Flexible time</li>
+                  <li>Choose your trainer</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-1">
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">Only</p>
+                  <div class="card__price-value">$100/session</div>
+                </div>
+                <a href="#popup" class="btn btn--white">Book now!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section__price--package">
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__picture card__picture--2">&nbsp;</div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--2">
+                  Package 2
+                </span>
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>24 sessions</li>
+                  <li>Flexible time</li>
+                  <li>Choose your trainer</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-2">
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">Only</p>
+                  <div class="card__price-value">$75/session</div>
+                </div>
+                <a href="#popup" class="btn btn--white">Book now!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section__price--package">
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__picture card__picture--3">&nbsp;</div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--3">
+                  Package 3
+                </span>
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>36 sessions</li>
+                  <li>Flexible time</li>
+                  <li>Choose your trainer</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-3">
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">Only</p>
+                  <div class="card__price-value">$50/session</div>
+                </div>
+                <a href="#popup" class="btn btn--white">Book now!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEEDBACK -->
+    <section class="section__feedback">
+      <div class="section__feedback--title">
+        <h1 class="primary__heading">
+          Many people are making their life healthier
+        </h1>
+      </div>
+      <div class="section__feedback--slider">
+        <div class="section__feedback--slide">
+          <div class="section__feedback--testimonial">
+            <blockquote class="section__feedback--text">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+              vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+              imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+              mollis pretium. Integer tincidunt.
+            </blockquote>
+            <address class="section__feedback--customer">
+              <img
+                src="./img/author-1.jpg"
+                alt=""
+                class="section__feedback--photo"
+              />
+              <h6 class="section__feedback--author">Jack Sparrow</h6>
+              <p class="section__feedback--location">Tay Ho, Ha Noi</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="section__feedback--slide">
+          <div class="section__feedback--testimonial">
+            <blockquote class="section__feedback--text">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+              vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+              imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+              mollis pretium. Integer tincidunt.
+            </blockquote>
+            <address class="section__feedback--customer">
+              <img
+                src="./img/author-2.jpg"
+                alt=""
+                class="section__feedback--photo"
+              />
+              <h6 class="section__feedback--author">Tony Stark</h6>
+              <p class="section__feedback--location">Hoan Kiem, Ha Noi</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="section__feedback--slide">
+          <div class="section__feedback--testimonial">
+            <blockquote class="section__feedback--text">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+              vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+              imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+              mollis pretium. Integer tincidunt.
+            </blockquote>
+            <address class="section__feedback--customer">
+              <img
+                src="./img/author-3.jpg"
+                alt=""
+                class="section__feedback--photo"
+              />
+              <h6 class="section__feedback--author">Phantom Assasin</h6>
+              <p class="section__feedback--location">Beijing, China</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="section__feedback--slide">
+          <div class="section__feedback--testimonial">
+            <blockquote class="section__feedback--text">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+              vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+              imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+              mollis pretium. Integer tincidunt.
+            </blockquote>
+            <address class="section__feedback--customer">
+              <img
+                src="./img/author-4.jpg"
+                alt=""
+                class="section__feedback--photo"
+              />
+              <h6 class="section__feedback--author">Captain Marvel</h6>
+              <p class="section__feedback--location">London, UK</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="section__feedback--slide">
+          <div class="section__feedback--testimonial">
+            <blockquote class="section__feedback--text">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+              vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+              imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+              mollis pretium. Integer tincidunt.
+            </blockquote>
+            <address class="section__feedback--customer">
+              <img
+                src="./img/author-5.jpg"
+                alt=""
+                class="section__feedback--photo"
+              />
+              <h6 class="section__feedback--author">Natasha Romanov</h6>
+              <p class="section__feedback--location">Moscow, Russia</p>
+            </address>
+          </div>
+        </div>
+
+        <button class="section__feedback--btn slider__btn--left">&larr;</button>
+        <button class="section__feedback--btn slider__btn--right">
+          &rarr;
+        </button>
+        <div class="dots"></div>
+      </div>
+    </section>
+
+    <section class="section__form" id="form">
+      <div class="register__form">
+        <img src="./img/form.jpg" alt="Form image" class="section__form--img" />
+        <form action="#" class="form">
+          <div class="form__title">
+            <h1 class="primary__heading">Register now</h1>
+          </div>
+
+          <div class="form__group">
+            <label for="name" class="form__label">Full Name</label>
+            <input type="text" class="form__input" id="name" required />
+          </div>
+
+          <div class="form__group">
+            <label for="phone" class="form__label">Phone number</label>
+            <input type="text" class="form__input" id="phone" required />
+          </div>
+
+          <div class="form__group">
+            <label for="email" class="form__label">Email</label>
+            <input type="email" class="form__input" id="email" required />
+          </div>
+
+          <div class="form__group">
+            <button class="form__btn btn btn--orange">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <nav class="footer__nav">
+        <img src="./img/logo.jpg" alt="Logo" class="footer__img" />
+        <ul class="footer__items">
+          <li class="footer__item">
+            <a href="#about" class="footer__link">About us</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Contact</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Careers</a>
+          </li>
+          <li class="footer__item">
+            <a
+              href="https://www.facebook.com/thelion.kickboxing/"
+              target="blank"
+              class="footer__link"
+            >
+              <svg class="footer__icon footer__icon--fb">
+                <use xlink:href="img/sprite.svg#icon-facebook2"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">
+              <svg class="footer__icon footer__icon--insta">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer__map" id="map"></div>
+    </footer>
+  </body>
+</html>
